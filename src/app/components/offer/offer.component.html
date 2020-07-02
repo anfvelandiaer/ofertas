@@ -1,0 +1,25 @@
+
+<div class="offer">
+ <div class="offer-dp">
+  <div class="offer-desplegable" (click)="desplegable()"> Oferta {{numberOffer}}</div>
+  <div #list class="offer-list" *ngIf = "showList">
+   <div *ngFor="let offer of offers; ; let i = index" class="offer-ul">
+    <li #element class="offer-element" [value]="i + 1">
+     <div (click)="getActualOffer(offer.id, element.value)" class="offer-option"> Oferta {{i + 1}} </div>
+    </li>
+   </div>
+  </div>
+ </div>
+
+
+ <div class="offer-info">
+  <div class="offer-id">
+   Id Oferta: 
+   <div class="offer-desplegable"> {{versions.id}} </div>
+  </div>
+  <div class="offer-nombre">
+   Nombre: 
+   <div class="offer-desplegable offer-desplegable--name"> {{versions.name}} </div>
+  </div>
+ </div>
+</div>

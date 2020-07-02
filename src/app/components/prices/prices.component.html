@@ -1,0 +1,16 @@
+<div class="prices">
+ 
+ <div class="prices-list--name">
+  <h2>Nombre</h2>
+  <div *ngFor="let p of productOfferingPrices">
+   <div class="prices-name">{{p.versions[0].name}}</div>
+  </div>
+ </div>
+ 
+ <div class="prices-list--amount">
+  <h2>Monto</h2>
+  <div *ngFor="let p of productOfferingPrices">
+   <div class="prices-amount">{{p.versions[0].price.amount}}</div>
+  </div>
+ </div>
+</div>
